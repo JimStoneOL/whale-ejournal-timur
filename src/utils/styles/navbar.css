@@ -1,0 +1,116 @@
+.containerbody {
+    display: flex;
+    min-height: 100%;
+    z-index: 999999;
+  }
+  h1 {
+    width: 920px;
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 30px 0;
+    
+  }
+  p {
+    width: 920px;
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 500;
+    line-height: 33px;
+    margin: 30px 0;
+  }
+  .navbar_heading {
+      background: #eee;
+      padding: 90px 108px;
+      text-align: left;
+      transition: transform .3s;
+      box-shadow: 0 0 5px black;
+      transform: translate3d(0, 0, 0);
+      flex: 1;
+    }
+   
+  input[data-function*='swipe'] {
+    opacity: 0;
+    position: absolute;
+  }
+  label[data-function*='swipe'] {
+    
+    font: 42px fontawesome;
+    text-align: center;
+    position: absolute;
+    cursor: pointer;
+    color: #808288;
+    top: 30px;
+    left: 30px;
+    width: 42px;
+    height: 42px;
+    transform: translate3d(0, 0, 0);
+    transition: transform .3s;
+    z-index: 1;
+    display: block;
+  }
+  label[data-function*='swipe']:hover {
+    color: #263249;
+  }
+  input[data-function*='swipe']:checked ~ label[data-function*='swipe'] {
+    transform: translate3d(280px, 0, 0);
+  }
+  label[data-function*='swipe']:checked {
+    display: block;
+  }
+  label:nth-child(2){
+    display: none;
+  }
+  input[data-function*='swipe']:checked ~ label:nth-child(2){
+    display: block;
+    transform: translate3d(280px, 0px, 0px);
+  }
+  input[data-function*='swipe']:checked ~ label:nth-child(3){
+    display: none;
+  }
+   
+  input[data-function*='swipe']:checked ~ .navbar_heading{
+    transform: translate3d(280px, 0px, 0px);
+  }
+  input[data-function*='swipe']:checked ~ .leftsidebar {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  input[data-function*='swipe']:checked ~ .leftsidebar .menubar li {
+    width: 100%;
+  }
+  .leftsidebar {
+    width: 277px;
+    background: #779cc7;
+    color: #eee;
+    left: 0;
+    transform: translate3d(-280px, 0px, 0px);
+    transition: all .3s;
+    position: absolute;
+    
+  }
+  .menubar li {
+    width: 0%;
+    padding: 25px 0px 0px 0px;
+    list-style: none;
+  }
+  .menubar li a {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    border: 1px solid #fff;
+    padding: 5px 0px 5px 0;
+    margin: 0 20px;
+    display: block;
+    text-decoration: none;
+    border-radius: 5px;
+    
+  }
+  .menubar li a:hover{
+    background: #8f48cd;
+    color: #fff;
+   
+  }
+  .menubar li a:active {
+    background-color: #8f48cd;
+  }
