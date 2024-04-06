@@ -1,5 +1,5 @@
 export const BookPage=()=>{
-
+console.log(1)
     return(<>
     <div style={{display:'grid'}}>
        <img width="350" height="500" src="https://avatars.mds.yandex.net/get-mpic/4466970/img_id657356551894054787.jpeg/orig"/>
